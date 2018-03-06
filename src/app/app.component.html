@@ -1,0 +1,23 @@
+<button class="btn btn-lg btn-outline-primary" (click)="content.show()">Open Modal</button>
+<custom-selector #content [title]="'common modal'">
+    <div class="modal-body">
+        <div class="edit-box">
+            <div class="">
+                <div class="col-md-12 form-group">
+                    <label class="addClientLabel">Dropdowns</label>
+                    <ejs-dropdownlist id='games' #sample [dataSource]='data' [query]='query' zIndex=100001 [fields]='fields' [placeholder]='waterMark' [popupHeight]='height' [width]="width"></ejs-dropdownlist>
+                </div>
+                <div class="col-md-12">
+                    <label class="addClientLabel">Multiselect</label>
+                    <ejs-multiselect id='remoteData' #remote [dataSource]='data' zIndex=100001 [fields]='fields' [width]="width" [query]='query' [placeholder]='waterMark'></ejs-multiselect>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</custom-selector>
+
+<hr>
+
+<pre>{{closeResult}}</pre>
